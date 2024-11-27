@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hijri/hijri_calendar.dart';
+import 'package:kareeb/features/home/view/widgets/build_backgrond.dart';
+import 'package:kareeb/features/home/view/widgets/date_info_row.dart';
+import 'package:kareeb/features/home/view/widgets/day_name.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -16,80 +19,58 @@ class _HomeViewState extends State<HomeView> {
     final Size sizeOfScreen = MediaQuery.of(context).size;
     HijriCalendar.setLocal('ar');
 
-    return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            height: sizeOfScreen.height * 0.22,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage('assets/images/background_img.jpg'),
-              ),
-            ),
-          ),
-          SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 20),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: RichText(
-                    text: TextSpan(
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            SizedBox(
+              height: sizeOfScreen.height * 0.25,
+              child: Stack(
+                children: [
+                  const BuildBackground(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextSpan(
-                          text: "${_dayName(miladi.weekday)}\n",
-                          style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        DayName(weekday: miladi.weekday),
+                        const SizedBox(height: 20),
+                        DateInfoRow(
+                          title: "Hijri Date: ",
+                          date: hijri.toFormat("dd MMMM yyyy"),
                         ),
-                        const TextSpan(
-                          text: 'Hijri Date: ',
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        ),
-                        TextSpan(
-                          text: "${hijri.toFormat("dd MMMM yyyy")}\n",
-                          style: const TextStyle(fontStyle: FontStyle.italic),
-                        ),
-                        const TextSpan(
-                          text: 'Miladi Date: ',
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        ),
-                        TextSpan(
-                          text:
+                        const SizedBox(height: 10),
+                        DateInfoRow(
+                          title: "Miladi Date: ",
+                          date:
                               "${miladi.day} ${_monthName(miladi.month)} ${miladi.year}",
-                          style: const TextStyle(fontStyle: FontStyle.italic),
                         ),
                       ],
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+            Expanded(
+              child: Container(
+                color: Colors.white,
+                child: const Center(
+                  child: Text(
+                    "Welcome to Kareeb App",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
-  }
-
-  String _dayName(int weekday) {
-    const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ];
-    return days[weekday - 1];
   }
 
   String _monthName(int month) {
