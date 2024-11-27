@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:kareeb/features/home/view/home_view.dart';
+import 'package:kareeb/features/main_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -19,7 +19,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             title: 'Read Quran',
             bodyText:
                 'Immerse yourself in the beauty of the Quran. Start reading daily to find peace and guidance.',
-            image: 'assets/images/holyQuran.png',
+            image: 'assets/images/quran.png',
           ),
           PageviewItem(
             title: 'Build Better Habits',
@@ -41,7 +41,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomeView(),
+              builder: (context) => const MainView(),
             ),
           );
         },
@@ -58,6 +58,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   PageViewModel PageviewItem(
       {required String title,
       required String bodyText,
