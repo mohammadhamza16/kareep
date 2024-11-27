@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kareeb/features/splash/veiw/splash_view.dart';
 
 void main() {
-  runApp(Kareep());
+  runApp(const Kareep());
 }
 
 class Kareep extends StatelessWidget {
@@ -10,7 +10,7 @@ class Kareep extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: SplashView(),
     );
   }

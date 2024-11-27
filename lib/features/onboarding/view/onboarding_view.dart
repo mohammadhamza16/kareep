@@ -41,7 +41,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => HomeView(),
+              builder: (context) => const HomeView(),
             ),
           );
         },
@@ -68,11 +68,11 @@ class _OnBoardingViewState extends State<OnBoardingView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Text(
               bodyText,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
               ),
             ),
