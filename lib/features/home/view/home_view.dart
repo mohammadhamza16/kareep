@@ -44,7 +44,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       children: [
                         TextSpan(
-                          text: _dayName(miladi.weekday) + "\n",
+                          text: "${_dayName(miladi.weekday)}\n",
                           style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class _HomeViewState extends State<HomeView> {
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
                         TextSpan(
-                          text: hijri.toFormat("dd MMMM yyyy") + "\n",
+                          text: "${hijri.toFormat("dd MMMM yyyy")}\n",
                           style: const TextStyle(fontStyle: FontStyle.italic),
                         ),
                         const TextSpan(
