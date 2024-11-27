@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:kareeb/features/aya_of_day/model/aya_of_the_day_model.dart';
-import 'package:kareeb/features/aya_of_day/services/api_service.dart';
+import 'package:kareeb/features/aya_of_day/services/get_aya_of_the_day_service.dart';
 import 'package:kareeb/features/aya_of_day/view/aya_of_the_day_body.dart';
 import 'package:kareeb/features/home/view/widgets/build_backgrond.dart';
 import 'package:kareeb/features/home/view/widgets/date_info_row.dart';
@@ -25,7 +25,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
-    _ayaFuture = ApiService().ayaofTheDayService();
+    _ayaFuture = GetAyaOfTheDayService().ayaofTheDayService();
     setData();
   }
 

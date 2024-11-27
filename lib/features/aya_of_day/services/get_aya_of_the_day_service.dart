@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:kareeb/features/aya_of_day/model/aya_of_the_day_model.dart';
 import 'package:kareeb/helper/api.dart';
 
-class ApiService {
+class GetAyaOfTheDayService {
   Future<AyaOfTheDayModel> ayaofTheDayService() async {
     var data = await Api().getDataFromAPI(
       url:

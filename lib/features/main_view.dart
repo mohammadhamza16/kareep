@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kareeb/features/audio/view/audio_view.dart';
 import 'package:kareeb/features/home/view/home_view.dart';
 import 'package:kareeb/features/prayer/view/prayer_view.dart';
-import 'package:kareeb/features/quran/view/quran_view.dart';
+import 'package:kareeb/features/quran/quran_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -16,8 +16,8 @@ class _MainViewState extends State<MainView> {
   int index = 0;
   List<Widget> views = [
     const HomeView(),
-    const PrayerView(),
     const QuranView(),
+    const PrayerView(),
     const AudioView(),
   ];
   @override
