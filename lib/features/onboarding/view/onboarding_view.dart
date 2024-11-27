@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:kareeb/view/home_view.dart';
+import 'package:kareeb/features/home/view/home_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -49,7 +49,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           size: const Size.square(10.0),
           activeSize: const Size(20.0, 10.0),
           activeColor: Theme.of(context).colorScheme.secondary,
-          color: Colors.black26,
+          color: Colors.grey,
           spacing: const EdgeInsets.symmetric(horizontal: 3.0),
           activeShape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
