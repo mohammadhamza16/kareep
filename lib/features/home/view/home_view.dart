@@ -5,6 +5,7 @@ import 'package:kareeb/features/aya_of_day/services/api_service.dart';
 import 'package:kareeb/features/home/view/widgets/build_backgrond.dart';
 import 'package:kareeb/features/home/view/widgets/date_info_row.dart';
 import 'package:kareeb/features/home/view/widgets/day_name.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -15,11 +16,16 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   late Future<AyaOfTheDayModel> _ayaFuture;
+  void setData() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool('alreadyUsed', true);
+  }
 
   @override
   void initState() {
     super.initState();
     _ayaFuture = ApiService().ayaofTheDayService();
+    setData();
   }
 
   @override
