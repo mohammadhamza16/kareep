@@ -8,6 +8,7 @@ class BuildBackground extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
+          opacity: .8,
           fit: BoxFit.cover,
           image: AssetImage('assets/images/background_img.jpg'),
         ),

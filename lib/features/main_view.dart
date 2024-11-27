@@ -22,29 +22,45 @@ class _MainViewState extends State<MainView> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: views[index],
-      bottomNavigationBar: ConvexAppBar(
-        items: [
-          TabItem(
-            icon: Image.asset('assets/images/home.png'),
-            title: 'Home',
-          ),
-          TabItem(
-            icon: Image.asset('assets/images/holyQuran.png'),
-            title: 'Quran',
-          ),
-          TabItem(
-            icon: Image.asset('assets/images/mosque.png'),
-            title: 'Prayer',
-          ),
-          TabItem(
-            icon: Image.asset('assets/images/audio.png'),
-            title: 'Audio',
-          ),
-        ],
-        initialActiveIndex: 0,
-        onTap: updateIndex,
+    return SafeArea(
+      child: Scaffold(
+        body: views[index],
+        bottomNavigationBar: ConvexAppBar(
+          backgroundColor: Colors.purple,
+          activeColor: Colors.purple,
+          items: [
+            TabItem(
+              icon: Image.asset(
+                'assets/images/home.png',
+                color: Colors.white,
+              ),
+              title: 'Home',
+            ),
+            TabItem(
+              icon: Image.asset(
+                'assets/images/holyQuran.png',
+                color: Colors.white,
+              ),
+              title: 'Quran',
+            ),
+            TabItem(
+              icon: Image.asset(
+                'assets/images/mosque.png',
+                color: Colors.white,
+              ),
+              title: 'Prayer',
+            ),
+            TabItem(
+              icon: Image.asset(
+                'assets/images/audio.png',
+                color: Colors.white,
+              ),
+              title: 'Audio',
+            ),
+          ],
+          initialActiveIndex: 0,
+          onTap: updateIndex,
+        ),
       ),
     );
   }

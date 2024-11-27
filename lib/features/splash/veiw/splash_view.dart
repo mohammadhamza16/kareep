@@ -27,17 +27,31 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Image.asset(
-            'assets/images/islamic.png',
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xff2fbdff),
+              Color(0xffff7582),
+            ],
           ),
-          const Center(
-            child: Text(
-              'Kareeb',
+        ),
+        child: Stack(
+          children: [
+            const Center(
+              child: Text(
+                'Kareeb',
+                style: TextStyle(fontFamily: 'Poppinis', fontSize: 42),
+              ),
             ),
-          )
-        ],
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: Image.asset(
+                'assets/images/islamic.png',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

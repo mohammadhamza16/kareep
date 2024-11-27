@@ -2,7 +2,7 @@ class AyaOfTheDayModel {
   final String ayaInArabic;
   final String ayaEnglishTranslation;
   final String suraEnlishName;
-  final String suraNumber;
+  final int suraNumber;
 
   AyaOfTheDayModel({
     required this.ayaInArabic,
