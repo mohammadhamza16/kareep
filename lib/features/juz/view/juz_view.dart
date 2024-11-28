@@ -17,11 +17,11 @@ class JuzView extends StatelessWidget {
           future: JuzService().getJuzz(Constants.juzIndex!),
           builder: (context, AsyncSnapshot<JuzModel> snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             } else if (snapshot.hasData) {
-              print('${snapshot.data!.juzAyahs.length} Length');
+              //   print('${snapshot.data!.juzAyahs.length} Length');
               return ListView.builder(
                 itemCount: snapshot.data!.juzAyahs.length,
                 itemBuilder: (context, index) {
@@ -52,8 +52,8 @@ class JuzCustomTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.all(16),
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(color: Colors.black12, blurRadius: 3),
@@ -67,7 +67,7 @@ class JuzCustomTile extends StatelessWidget {
           ),
           Text(
             list[index].ayahsText,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,
             ),

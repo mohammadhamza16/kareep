@@ -75,10 +75,10 @@ class _JuzWidgetState extends State<JuzWidget> {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         child: GridView.builder(
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3),
           itemCount: 30,
           itemBuilder: (context, index) {
             return GestureDetector(
@@ -88,7 +88,7 @@ class _JuzWidgetState extends State<JuzWidget> {
                 });
 
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => JuzView()));
+                    MaterialPageRoute(builder: (context) => const JuzView()));
               },
               child: Card(
                 elevation: 4,
@@ -96,7 +96,7 @@ class _JuzWidgetState extends State<JuzWidget> {
                 child: Center(
                   child: Text(
                     '${index + 1}',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: const TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
               ),

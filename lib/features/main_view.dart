@@ -1,6 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:kareeb/features/audio/view/audio_view.dart';
+import 'package:kareeb/features/qrui/view/qari_player_view.dart';
 import 'package:kareeb/features/home/view/home_view.dart';
 import 'package:kareeb/features/prayer/view/prayer_view.dart';
 import 'package:kareeb/features/quran/view/quran_view.dart';
@@ -18,7 +18,7 @@ class _MainViewState extends State<MainView> {
     const HomeView(),
     const QuranView(),
     const PrayerView(),
-    const AudioView(),
+    const QariPlayerView(),
   ];
   @override
   Widget build(BuildContext context) {
