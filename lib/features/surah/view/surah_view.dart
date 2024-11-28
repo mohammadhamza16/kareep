@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kareeb/features/quran/surah_feature/model/surah_model.dart';
-import 'package:kareeb/features/quran/services/get_surah_service.dart';
-import 'package:kareeb/features/quran/surah_feature/view/widgets/surah_custom_list_tile.dart';
+import 'package:kareeb/features/surah/model/surah_model.dart';
+import 'package:kareeb/features/surah/services/get_surah_service.dart';
+import 'package:kareeb/features/surah/view/widgets/surah_custom_list_tile.dart';
 
 class SurahView extends StatelessWidget {
   const SurahView({

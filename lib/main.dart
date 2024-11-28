@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kareeb/features/splash/veiw/splash_view.dart';
+import 'package:kareeb/features/splash/view/splash_view.dart';
 
 void main() {
   runApp(const Kareep());

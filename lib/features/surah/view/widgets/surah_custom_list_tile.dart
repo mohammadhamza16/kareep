@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kareeb/features/quran/surah_feature/model/surah_model.dart';
+import 'package:kareeb/features/surah/model/surah_model.dart';
 
 class SurahCustomListTile extends StatelessWidget {
   const SurahCustomListTile({
