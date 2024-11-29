@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:kareeb/features/main_view.dart';
+import 'package:kareeb/helper/main_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});

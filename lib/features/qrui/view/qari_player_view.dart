@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kareeb/features/audio/view/audio_surah_view.dart';
 import 'package:kareeb/features/qrui/service/qari_service.dart';
 import 'package:kareeb/helper/api.dart';
 import 'package:kareeb/features/qrui/model/qari_model.dart';
@@ -11,7 +12,7 @@ class QariPlayerView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Qari\'s'),
+          title: const Text('Qari\'s'),
           centerTitle: true,
         ),
         body: Padding(
@@ -82,7 +83,12 @@ class QariPlayerView extends StatelessWidget {
                             trailing: IconButton(
                               icon: const Icon(Icons.play_arrow),
                               onPressed: () {
-                                // Implement playback functionality here
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => AudioSurahView(
+                                              qari: snapshot.data![index],
+                                            )));
                               },
                             ),
                           );

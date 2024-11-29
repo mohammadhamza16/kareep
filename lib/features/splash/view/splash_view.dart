@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:kareeb/features/main_view.dart';
+import 'package:kareeb/helper/main_view.dart';
 import 'package:kareeb/features/onboarding/view/onboarding_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
